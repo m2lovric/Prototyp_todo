@@ -1,0 +1,32 @@
+.list {
+  width: 80%;
+  background-color: white;
+  @include box-shadow;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  overflow: hidden;
+  border: 1px solid $gray--light;
+  border-bottom: none;
+
+  &__task {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1% 2%;
+    border-bottom: 1px solid $gray--light;
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+
+    &__task {
+      width: 45%;
+    }
+
+    &__dueDate {
+      padding-left: 2%;
+    }
+  }
+
+  &__task:last-child {
+    border-bottom: none;
+  }
+}
