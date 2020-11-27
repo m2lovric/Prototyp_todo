@@ -20,6 +20,11 @@
     outline: none;
   }
 
+  &__input:nth-child(2) {
+    padding-right: 25%;
+    width: 18%;
+  }
+
   button {
     width: 10%;
     height: 2rem;
