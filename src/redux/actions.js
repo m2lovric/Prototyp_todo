@@ -17,3 +17,10 @@ export const newTask = (task, dueDate) => {
       }
     }
 }
+
+export const removeTaskAction = (state) => {
+  return {
+    type: 'REMOVE',
+    data: state
+  }
+}
