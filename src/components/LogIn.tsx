@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-const LogIn = ({ show, handleClose }) => {
+const LogIn = ({ show, handleClose }: any) => {
   return (
     <Modal overlayClassName="modal__popup__overlay" className="modal__popup" isOpen={show}>
       <p>Log In</p>
