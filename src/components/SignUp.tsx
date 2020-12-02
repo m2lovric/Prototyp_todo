@@ -4,13 +4,13 @@ import Modal from 'react-modal'
 import { signUp } from '../firebase/auth'
 
 
-const SignUp = ({ show, handleClose }) => {
+const SignUp = ({ show, handleClose }: any) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
-  const signUpForm = (e) => {
+  const signUpForm = (e: any) => {
     e.preventDefault();
     signUp(email, password, passwordConfirm);
   }
