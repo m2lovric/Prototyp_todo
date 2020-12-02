@@ -1,4 +1,4 @@
-export const taskReducer = (state, action) => {
+export const taskReducer = (state: [], action: any) => {
   switch (action.type) {
     case 'ADD':
       return [...state, action.data]
