@@ -8,14 +8,14 @@ export const newTask = (task, dueDate) => {
   }
 
   return {
-      type: 'ADD',
-      data: {
-        id: id(),
-        task,
-        dueDate,
-        done: false
-      }
+    type: 'ADD',
+    data: {
+      id: id(),
+      task,
+      dueDate,
+      done: false
     }
+  }
 }
 
 export const removeTaskAction = (state) => {

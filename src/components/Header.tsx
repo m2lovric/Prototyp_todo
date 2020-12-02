@@ -1,8 +1,7 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
 
-import LogIn from './LogIn'
-import SignUp from './SignUp'
+import { LogIn, SignUp } from './index'
 
 const Header = () => {
   const [showLogIn, setShowLogIn] = useState(false);

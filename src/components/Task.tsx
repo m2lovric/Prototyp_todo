@@ -6,11 +6,11 @@ const Task = () => {
   const tasks = useSelector(state => state);
   console.log(tasks)
   const dispacth = useDispatch();
-  tasks.map(el => console.log(el.id))
+  tasks.map((el: object) => console.log(el.id))
 
-  const removeTask = (e) => {
+  const removeTask = (e: any) => {
     const id = e.target.parentNode.getAttribute('data-key');
-    const modState = tasks.filter((task) => {
+    const modState = tasks.filter((task: object) => {
       return id !== task.id
     });
     dispacth(removeTaskAction(modState))

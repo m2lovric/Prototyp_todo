@@ -1,13 +1,13 @@
 import { auth } from './app'
 
-export const signUp = (email: string, password: string, password_confirm: string) => {
-  if (password === password_confirm) {
+export const signUp = (email: string, password: string, passwordConfirm: string) => {
+  if (password === passwordConfirm) {
     auth.createUserWithEmailAndPassword(email, password)
-      .then((user) => {
-        console.log('Successfully signed in.');
+      .then((user: object) => {
+        return user;
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((err: any) => {
+        return err;
       })
   }
 }
