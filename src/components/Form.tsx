@@ -3,15 +3,15 @@ import { useDispatch } from 'react-redux'
 import { newTask } from '../redux/actions'
 
 const Form = () => {
-  const dispacth = useDispatch();
+  const dispatch = useDispatch();
 
-  const addTask = (e) => {
+  const addTask = (e: any) => {
     e.preventDefault();
     const task = e.target.task.value;
     const dueDate = e.target.duedate.value;
     e.target.task.value = '';
     e.target.duedate.value = '';
-    dispacth(newTask(task, dueDate))
+    dispatch(newTask(task, dueDate))
   }
   return (
     <form className="form" onSubmit={addTask}>
