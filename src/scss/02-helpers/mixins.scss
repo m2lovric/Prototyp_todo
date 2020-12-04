@@ -4,7 +4,7 @@
   box-shadow: 10px 10px 15px 0px rgba(217, 217, 217, 0.5);
 }
 
-@mixin modal-box-shadow {
+@mixin darker-box-shadow {
   -webkit-box-shadow: 10px 10px 17px 0px rgba(77, 77, 77, 0.8);
   -moz-box-shadow: 10px 10px 17px 0px rgba(77, 77, 77, 0.8);
   box-shadow: 10px 10px 17px 0px rgba(77, 77, 77, 0.8);
