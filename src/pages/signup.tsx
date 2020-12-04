@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import Modal from 'react-modal'
 
 import { signUp } from '../firebase/auth'
 
 
-const SignUp = ({ show, handleClose }: any) => {
+const SignUp = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,10 +15,9 @@ const SignUp = ({ show, handleClose }: any) => {
   }
 
   return (
-    <Modal overlayClassName="modal__popup__overlay" className="modal__popup signup" isOpen={show}>
+    <section className="signup">
       <section>
         <p>Sign Up</p>
-        <button onClick={handleClose}>Close</button>
       </section>
       <form className="signup__form" onSubmit={signUpForm}>
         <label htmlFor="email">Email</label>
@@ -33,7 +31,7 @@ const SignUp = ({ show, handleClose }: any) => {
 
         <button className="signup__btn" type="submit">Sign Up</button>
       </form>
-    </Modal>
+    </section>
   )
 }
 
