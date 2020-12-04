@@ -37,6 +37,10 @@ header {
     }
 
     .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
       font-family: 'Dosis', sans-serif;
       font-size: 1rem;
       font-weight: 800;
@@ -45,6 +49,7 @@ header {
       padding: 0.25rem 0.75rem;
       border-radius: 6px;
       text-decoration: none;
+      text-transform: uppercase;
       border: none;
       outline: none;
     }
