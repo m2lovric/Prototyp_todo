@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-
 import { signUp } from '../firebase/auth'
-import Layout from '../components/Layout';
-
+import Layout from '../components/Layout'
+import { Link, navigate } from 'gatsby'
 
 const SignUp = () => {
 
@@ -13,6 +12,7 @@ const SignUp = () => {
   const signUpForm = (e: any) => {
     e.preventDefault();
     signUp(email, password, passwordConfirm);
+    navigate('/');
   }
 
   return (
