@@ -23,3 +23,10 @@ export const removeTaskAction = (state: any) => {
     data: state
   }
 }
+
+export const userExist = (state: any) => {
+  return {
+    type: 'USER_EXIST',
+    data : state
+  }
+}
