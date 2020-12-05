@@ -9,14 +9,16 @@ import { userReducer} from './src/redux/userReducer'
 
 import { saveState } from './src/localStorage/localStorage'
 
+
+
+const allReducers = combineReducers({
+  task : taskReducer,
+  user : userReducer
+});
+
+export const store = createStore(allReducers);
+
 export default ({ element }) => {
-
-  const allReducers = combineReducers({
-    task : taskReducer,
-    user : userReducer
-  });
-
-  const store = createStore(allReducers)
 
   store.subscribe(() => {
     saveState(store.getState().task)
