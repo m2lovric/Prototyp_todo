@@ -1,4 +1,3 @@
-import { SetFieldsOnGraphQLNodeTypeArgs } from 'gatsby';
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeTaskAction } from '../redux/actions'
@@ -11,10 +10,8 @@ const Task = () => {
     done: boolean
   }
 
-  const tasks = useSelector((state: []) => state);
-  console.log(tasks)
+  const tasks = useSelector((state: []) => state.task);
   const dispatch = useDispatch();
-  tasks.map((el: ObjectTask) => console.log(el.id))
 
   const removeTask = (e: any) => {
     const id = e.target.dataset.id;
