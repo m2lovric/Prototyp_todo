@@ -1,4 +1,8 @@
-export const taskReducer = (state: [], action: any) => {
+import { loadState } from '../localStorage/localStorage.js'
+
+const persistedData = loadState();
+
+export const taskReducer = (state = persistedData || [], action: any) => {
   switch (action.type) {
     case 'ADD':
       return [...state, action.data]
