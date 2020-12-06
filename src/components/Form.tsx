@@ -1,9 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { newTask } from '../redux/actions'
+import { db } from '../firebase/app'
+import { v4 } from 'uuid';
 
 const Form = () => {
   const dispatch = useDispatch();
+  const user = useSelector((state: []) => state.user);
 
   const addTask = (e: any) => {
     e.preventDefault();
@@ -11,7 +14,19 @@ const Form = () => {
     const dueDate = e.target.duedate.value;
     e.target.task.value = '';
     e.target.duedate.value = '';
-    dispatch(newTask(task, dueDate))
+    if(user.uid){
+      db.collection('users').doc(user.uid).collection('tasks').add({
+        task : {
+          task,
+          dueDate,
+          done: false
+        }
+      }).then(res => {
+        return res;
+      })
+    } else {
+      dispatch(newTask(task, dueDate))
+    }
   }
   return (
     <form className="form" onSubmit={addTask}>
