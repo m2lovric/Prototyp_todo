@@ -1,5 +1,7 @@
 import { db } from './app'
 
-db.collection('users').get().then(data => {
-  console.log(data.docs);
-})
+const getData = (userid:string) => {
+  db.collection('users').doc(userid).collection('tasks').get().then(data => {
+    console.log(data.docs);
+  });
+}
