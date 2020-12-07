@@ -16,7 +16,9 @@ const allReducers = combineReducers({
   user : userReducer
 });
 
-export const store = createStore(allReducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const extension = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+
+export const store = createStore(allReducers, extension);
 
 export default ({ element }) => {
 
